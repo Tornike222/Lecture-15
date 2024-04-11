@@ -91,11 +91,6 @@ class SearchViewController: UIViewController {
         return nextButton
     }()
     
-    
-    
-    
-
-    
     //MARK: ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -118,14 +113,14 @@ class SearchViewController: UIViewController {
         view.layer.contentsGravity = .resizeAspectFill
         view.layer.contents = backgroundImage?.cgImage
     }
-
+    
     func addDescriptionStackView(){
         view.addSubview(descriptionStackView)
         
         descriptionStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 18).isActive = true
         descriptionStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -18).isActive = true
         descriptionStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20).isActive = true
-//        descriptionStackView.heightAnchor.constraint(equalToConstant: 110).isActive = true
+        //        descriptionStackView.heightAnchor.constraint(equalToConstant: 110).isActive = true
     }
     
     func addMishaTsagareliLabel(){
@@ -165,10 +160,10 @@ class SearchViewController: UIViewController {
     
     func addNextButton(){
         inputAndButtonStackView.addArrangedSubview(nextButton)
-//        nextButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-    
+        //        nextButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
         nextButton.addTarget(self, action: #selector(buttonTouchedUp(_:)), for: .touchUpInside)
-
+        
     }
     
     //MARK: OBJC Functions
@@ -187,7 +182,7 @@ class SearchViewController: UIViewController {
                                 capricorn]
         
         let matchedInputedTextToZodiac = zodiacModelNames.first(where: { $0.name.lowercased() == zodiacInputField.text?.lowercased()})
-                
+        
         if matchedInputedTextToZodiac != nil {
             zodiacInputField.layer.borderColor = UIColor.lightGray.cgColor
             let dvc = DetailsViewController()

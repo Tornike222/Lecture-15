@@ -103,7 +103,7 @@ class OppositeSignViewController: UIViewController {
     
     func addOppositeSignField(){
         oppositeSignSV.addArrangedSubview(oppositeSignLabel)
-    
+        
         oppositeSignLabel.text = zodiacModel?.polarSignName
     }
     
@@ -115,14 +115,16 @@ class OppositeSignViewController: UIViewController {
         actionButtonsStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -17).isActive = true
         
     }
+    
     func addRedButton(){
         actionButtonsStackView.addArrangedSubview(redButton)
         
         redButton.addTarget(self, action: #selector(redButtonTouchedUp(_:)), for: .touchUpInside)
     }
+    
     func addBlueButton(){
         actionButtonsStackView.addArrangedSubview(blueButton)
-
+        
         blueButton.addTarget(self, action: #selector(blueButtonTouchedUp(_:)), for: .touchUpInside)
     }
     
@@ -132,14 +134,15 @@ class OppositeSignViewController: UIViewController {
             firstViewController.view.backgroundColor = .red
             navigationController?.popToViewController(firstViewController, animated: false)
         }
-     
+        
     }
+    
     @objc func blueButtonTouchedUp(_ sender: CustomButton) {
         if let firstViewController = navigationController?.viewControllers.first {
             firstViewController.view.backgroundColor = .blue
             navigationController?.popToViewController(firstViewController, animated: false)
         }
-     
+        
     }
     
     

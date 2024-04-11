@@ -10,9 +10,7 @@ import UIKit
 class DetailsViewController: UIViewController {
     
     //MARK:  Object From Parent Screen and UI Objects
-
     var zodiacModel: ZodiacModel?
-    
     
     let zodiacSign: UIImageView = {
         let zodiacSign = UIImageView()
@@ -105,6 +103,7 @@ class DetailsViewController: UIViewController {
         zodiacName.topAnchor.constraint(equalTo: zodiacSign.bottomAnchor, constant: 0.9).isActive = true
         
     }
+    
     func addZodiacSV(){
         view.addSubview(zodiacSV)
         
