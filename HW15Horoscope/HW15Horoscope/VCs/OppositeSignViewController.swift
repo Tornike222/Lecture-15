@@ -103,7 +103,7 @@ class OppositeSignViewController: UIViewController {
     
     func addOppositeSignField(){
         oppositeSignSV.addArrangedSubview(oppositeSignLabel)
-        
+    
         oppositeSignLabel.text = zodiacModel?.polarSignName
     }
     
@@ -124,10 +124,9 @@ class OppositeSignViewController: UIViewController {
         actionButtonsStackView.addArrangedSubview(blueButton)
 
         blueButton.addTarget(self, action: #selector(blueButtonTouchedUp(_:)), for: .touchUpInside)
-
     }
     
-    //MARK: OBJ C ის ფუნქციიები
+    //MARK: OBJ-C Functions
     @objc func redButtonTouchedUp(_ sender: CustomButton) {
         if let firstViewController = navigationController?.viewControllers.first {
             firstViewController.view.backgroundColor = .red
